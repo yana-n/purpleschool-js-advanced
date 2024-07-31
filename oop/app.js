@@ -23,7 +23,6 @@ const Orc = function(options, weapon){
 }
 
 Orc.prototype.blow = function() { console.log('Blow!') }
-Orc.prototype.blow = function() { console.log('Blow!') }
 
 const orc = new Orc(options, 'axe')
 orc.blow() // Blow!
