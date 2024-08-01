@@ -22,10 +22,13 @@ const Orc = function(options, weapon){
 	this.weapon = weapon
 }
 
+Orc.prototype = Object.create(Character.prototype)
+
 Orc.prototype.blow = function() { console.log('Blow!') }
 
 const orc = new Orc(options, 'axe')
 orc.blow() // Blow!
+orc.speak() // language: en, name: John
 console.log(orc.race) // European
 
 const Elf = function(options, spellType){
@@ -33,10 +36,13 @@ const Elf = function(options, spellType){
 	this.spellType = spellType
 }
 
+Elf.prototype = Object.create(Character.prototype)
+
 Elf.prototype.createSpell = function() {
 	console.log(`Spell was created with ${this.spellType}`)
 }
 
 const elf = new Elf(options, 'magic')
 elf.createSpell() // Spell was created with magic
+elf.speak() // language: en, name: John
 console.log(elf.language) // en
