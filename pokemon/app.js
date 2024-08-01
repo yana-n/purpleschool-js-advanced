@@ -1,4 +1,5 @@
 const TEXT_LANG = 'en'
+const POKE_API = 'https://pokeapi.co/api/v2'
 
 const createReq = (url, method = 'GET') => {
 	const req = new XMLHttpRequest()
@@ -8,7 +9,7 @@ const createReq = (url, method = 'GET') => {
 	return req
 }
 
-const ditto = createReq('https://pokeapi.co/api/v2/pokemon/ditto')
+const ditto = createReq(`${POKE_API}/pokemon/ditto`)
 
 ditto.addEventListener('load', () => {
 	const { abilities } = JSON.parse(ditto.responseText)
