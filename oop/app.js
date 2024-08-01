@@ -23,6 +23,7 @@ const Orc = function(options, weapon){
 }
 
 Orc.prototype = Object.create(Character.prototype)
+Orc.prototype.constructor = Orc
 
 Orc.prototype.blow = function() { console.log('Blow!') }
 
@@ -37,6 +38,7 @@ const Elf = function(options, spellType){
 }
 
 Elf.prototype = Object.create(Character.prototype)
+Elf.prototype.constructor = Elf
 
 Elf.prototype.createSpell = function() {
 	console.log(`Spell was created with ${this.spellType}`)
