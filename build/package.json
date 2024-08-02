@@ -5,8 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "live-server": "live-server",
-    "watch": "rollup --watch --config rollup.config.js",
+    "live-server": "live-server --entry-file=src/index.js --open=src/index.html",
     "build": "rollup --config rollup.config.js"
   },
   "repository": {
