@@ -1,5 +1,13 @@
 class Billing {
-	amount = 0
+	#amount = 100
+
+	constructor(amount) {
+		this.#amount = amount
+	}
+
+	get amount() {
+		return this.#amount
+	}
 
 	calculateTotal() {
 		return this.amount
@@ -7,14 +15,14 @@ class Billing {
 }
 
 class FixedBilling extends Billing {
-	amount = 10
+	constructor(amount) {
+		super(amount)
+	}
 }
 
 class HourBilling extends Billing {
-	amount = 20
-
-	constructor(hours) {
-		super()
+	constructor(amount, hours) {
+		super(amount)
 
 		this.hours = hours
 	}
@@ -25,10 +33,8 @@ class HourBilling extends Billing {
 }
 
 class ItemsBilling extends Billing {
-	amount = 30
-
-	constructor(items) {
-		super()
+	constructor(amount, items) {
+		super(amount)
 
 		this.items = items
 	}
@@ -37,3 +43,8 @@ class ItemsBilling extends Billing {
 		return this.amount * this.items
 	}
 }
+
+console.log(new Billing(300).calculateTotal())
+console.log(new FixedBilling(400).calculateTotal())
+console.log(new HourBilling(500, 4).calculateTotal())
+console.log(new ItemsBilling(600, 20).calculateTotal())
