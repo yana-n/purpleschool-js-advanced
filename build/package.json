@@ -1,0 +1,25 @@
+{
+  "name": "build-sample",
+  "version": "1.0.0",
+  "description": "Build sample",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "live-server": "live-server --entry-file=src/index.js --open=src/index.html",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yana-n/purpleschool-js-advanced.git"
+  },
+  "author": "Yana N",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yana-n/purpleschool-js-advanced/issues"
+  },
+  "homepage": "https://github.com/yana-n/purpleschool-js-advanced#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "rollup": "^4.19.2"
+  }
+}
