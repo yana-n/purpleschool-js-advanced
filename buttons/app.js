@@ -17,14 +17,14 @@ const createBtn = () => {
 const toggleButton = (e) => {
 	const target = e?.target
 
+	if (target?.type !== 'button') return
+
 	actions
 		.querySelectorAll('button')
 		.forEach(button => {
 			button.innerText = BTN_TEXT
 			button.removeAttribute('disabled')
 		})
-
-	if (target?.type !== 'button') return
 
 	target.innerText = BTN_CLICKED_TEXT
 	target.setAttribute('disabled', 'disabled')
